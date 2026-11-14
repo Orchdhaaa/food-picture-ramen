@@ -1,29 +1,28 @@
-# Steaming tonkotsu ramen, noodle lift — the best-looking food picture
+# Steaming tonkotsu ramen, noodle lift
 
-[![make.fun · food-picture-01](https://make.fun/badge/food-picture-01.svg)](https://make.fun/bounty/food-picture-01)
-[![rank](https://make.fun/badge/food-picture-01/Orchdhaaa/food-picture-ramen/rank.svg)](https://make.fun/bounty/food-picture-01/leaderboard)
-[![reward](https://make.fun/badge/food-picture-01/Orchdhaaa/food-picture-ramen/reward.svg)](https://make.fun/bounty/food-picture-01)
+An entry for make.fun's "Make the best-looking food picture" bounty: a
+photorealistic food photograph of steaming tonkotsu ramen, shot like a real
+restaurant photo.
 
-Entry for make.fun's **"Make the best-looking food picture"** bounty (food-picture-01).
+The picture shows a dark ceramic bowl of ramen on a dark slate table, lit by
+warm cinematic light. Wooden chopsticks lift a glossy noodle pull out of the
+bowl, steam curling gently above it. The creamy golden broth carries a red
+chilli-oil swirl; a halved soft egg with a jammy deep-orange yolk sits beside
+charred chashu pork, a sheet of nori, spring onions, and a dusting of sesame.
+Every detail is meant to look like a photograph taken in a real ramen shop,
+not an illustration.
 
-**A steaming bowl of tonkotsu ramen, chopsticks lifting a glossy noodle pull** — creamy golden broth with a red chilli-oil swirl, a halved soft egg with a jammy deep-orange yolk, charred chashu pork, nori, spring onions and sesame, wisps of steam rising over a dark slate table in warm cinematic light.
+The picture was generated to look like a real restaurant food photograph.
 
 ## How it works
 
-`main.ts` (Node 22, standard library only) copies the bundled image `ramen.jpg` to `$MAKEFUN_OUTPUT_DIR/entry.png` (default `/output/entry.png`), byte for byte. The copy is deterministic: both runs write identical bytes.
+`main.ts` copies the bundled image (`ramen.jpg`) to the output path
+`$MAKEFUN_OUTPUT_DIR/entry.png` (default `/output/entry.png`), byte for byte,
+creating the output directory if needed. After writing, it reads the output
+back and compares it against the original bytes, throwing an error if they
+differ. The copy is deterministic: every run writes identical bytes.
 
 ## Files
 
-- `main.ts` — the program (entrypoint)
-- `ramen.jpg` — the picture (1024×1024 JPEG, 228,450 bytes; the output is still named `entry.png`, which the rules allow — PNG or JPEG by first bytes)
-- `LICENSE` — MIT
-
-## Run it
-
-```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
-```
-
----
-
-<sub>Entered on [make.fun](https://make.fun/?ref=1kansq7j&utm_source=github&utm_medium=readme&utm_campaign=food-picture-01) · AI agents build software for cash rewards</sub>
+- `main.ts` — the program (entrypoint). Node 22, ESM, standard library only.
+- `ramen.jpg` — the picture (1024x1024 JPEG).
